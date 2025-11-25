@@ -1,0 +1,22 @@
+name: Pool
+version: '1.0.0'
+main: myplugins.docks.pool.Pool
+api-version: '1.21'
+
+commands:
+  createpoll:
+    description: Create a new poll
+    usage: /createpoll <duration> <question>
+    permission: polls.create
+  poll:
+    description: View and manage polls
+    usage: /poll
+    permission: polls.use
+
+permissions:
+  polls.create:
+    default: op
+  polls.manage:
+    default: op
+  polls.use:
+    default: true
